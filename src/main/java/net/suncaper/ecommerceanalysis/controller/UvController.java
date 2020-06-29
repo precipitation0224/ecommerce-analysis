@@ -21,4 +21,9 @@ public class UvController {
         return jdbcTemplate.queryForList("SELECT * FROM dws_uv_detail_wk ORDER BY wk_num ASC");
         // 把数据返回
     }
+
+    @GetMapping("/test")
+    public  String toTest(){
+        return "LostUser";
+    }
 }

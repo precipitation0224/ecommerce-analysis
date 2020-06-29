@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shopping</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/echarts.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!--main.js 导航栏控制页面切换 -->
+    <script src="/js/main.js"></script>
+    <!--LostUser.js 我负责的用户流失部分的js  建议大家将自己负责的部分单独写一个js -->
+    <script src="/js/LostUser.js"></script>
+    <!--main.css 导航栏和数据图表的样式文件  如果后续有冲突大家自行更改-->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+</head>
+<body>
+
+<div id="nav">
+    <el-menu
+            default-active="2"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            @select="handleSelect"
+            background-color="#545c64"
+            text-color="#fff"
+            active-text-color="#ffd04b">
+        <el-submenu index="1">
+            <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>导航一</span>
+            </template>
+            <el-menu-item-group>
+                <template slot="title">分组一</template>
+                <el-menu-item index="1-1">选项1</el-menu-item>
+                <el-menu-item index="1-2">选项2</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+                <el-menu-item index="1-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="1-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="1-4-1">选项1</el-menu-item>
+            </el-submenu>
+        </el-submenu>
+        <el-menu-item index="2">
+            <i class="el-icon-menu"></i>
+            <span slot="title">导航二</span>
+        </el-menu-item>
+        <el-menu-item index="3"  >
+            <i class="el-icon-document"></i>
+            <span slot="title">导航三</span>
+        </el-menu-item>
+        <el-menu-item index="4">
+            <i class="el-icon-setting"></i>
+            <span slot="title">用户流失情况</span>
+        </el-menu-item>
+        <el-menu-item index="5">
+            <i class="el-icon-setting"></i>
+            <span slot="title">导航5</span>
+        </el-menu-item>
+        <el-menu-item index="6">
+            <i class="el-icon-setting"></i>
+            <span slot="title">导航6</span>
+        </el-menu-item>
+    </el-menu>
+</div>
+<div id="data_tables_holder">
+    <!-- 类 data_table  存放 数据图标的地方 直接将图表显示在其中即可 -->
+    <div class="data_table data_table_selected">1</div>
+    <div class="data_table">2</div>
+    <div class="data_table">3</div>
+    <div class="data_table" id="Lost_user_table">4</div>
+    <div class="data_table">5</div>
+    <div class="data_table">6</div>
+</div>
+</body>
+</html>

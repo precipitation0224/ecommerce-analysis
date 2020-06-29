@@ -1,0 +1,26 @@
+body{
+    background-color: #545c64;
+     
+}
+#nav{
+    position: absolute;
+    display:   block;
+    width: 300px;
+    height: 100%;
+}
+.data_table{
+    /* 默认不显示*/
+    display: none;
+    width: 1000px;
+    height: 700px;
+}
+.data_table_selected{
+    /*选中即显示*/
+    display:  inline;
+}
+#data_tables_holder{
+    display: inline-block;
+    position: relative;
+    left: 400px;
+    background-color: #fff;
+}
