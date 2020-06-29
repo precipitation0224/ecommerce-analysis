@@ -14,6 +14,8 @@
     <script src="/js/main.js"></script>
     <!--LostUser.js 我负责的用户流失部分的js  建议大家将自己负责的部分单独写一个js -->
     <script src="/js/LostUser.js"></script>
+    <!-- 最近七天内，用户连续活跃三天-->
+    <script src="/js/ActCon.js"></script>
     <!--main.css 导航栏和数据图表的样式文件  如果后续有冲突大家自行更改-->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
@@ -54,7 +56,7 @@
         </el-menu-item>
         <el-menu-item index="3"  >
             <i class="el-icon-document"></i>
-            <span slot="title">导航三</span>
+            <span slot="title">连续三天用户活跃数</span>
         </el-menu-item>
         <el-menu-item index="4">
             <i class="el-icon-setting"></i>
@@ -74,7 +76,7 @@
     <!-- 类 data_table  存放 数据图标的地方 直接将图表显示在其中即可 -->
     <div class="data_table data_table_selected">1</div>
     <div class="data_table">2</div>
-    <div class="data_table">3</div>
+    <div class="data_table" id="Act_continue_3_day">3</div>
     <div class="data_table" id="Lost_user_table">4</div>
     <div class="data_table">5</div>
     <div class="data_table">6</div>
